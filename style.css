@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 4rem;
+}
+/* ========== section ========== */
+section {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+  gap: 1rem;
+
+  padding-block: 4rem;
+  background: #000000;
+}
+
+/* ========== article ========== */
+article {
+  background-image: url("baggrund.webp");
+  grid-column: 2;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.content > p {
+  color: #000000;
+}
+
+p + figure {
+  margin-top: 1rem;
+}
+
+/* ========== gallery ========== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  height: 100%;
+  object-fit: cover;
+}
